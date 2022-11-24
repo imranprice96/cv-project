@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Details from "./Details";
+import "./PersonalDetailsForm.css";
 
 class PersonalDetailsForm extends Component {
 	constructor() {
@@ -38,7 +39,8 @@ class PersonalDetailsForm extends Component {
 
 		if (isSubmitted) {
 			return (
-				<div>
+				<div className="details-container">
+					<h2>Personal Information</h2>
 					<Details details={this.state} />
 					<button onClick={this.onEdit}>Edit</button>
 				</div>
@@ -46,50 +48,60 @@ class PersonalDetailsForm extends Component {
 		}
 
 		return (
-			<div>
+			<div className="details-container">
 				<h2>Personal Information</h2>
 				<form onSubmit={this.onSubmitDetails}>
-					<label htmlFor="fName">First Name:</label>
-					<input
-						type="text"
-						id="fName"
-						name="firstName"
-						placeholder="First Name"
-						value={this.state.firstName}
-						onChange={this.hanndleChange}
-						required
-					/>
-					<label htmlFor="lName">Last Name:</label>
-					<input
-						type="text"
-						id="lName"
-						name="lastName"
-						placeholder="Last Name"
-						value={this.state.lastName}
-						onChange={this.hanndleChange}
-						required
-					/>
-					<label htmlFor="email">Email:</label>
-					<input
-						type="email"
-						id="email"
-						name="email"
-						placeholder="Email"
-						value={this.state.email}
-						onChange={this.hanndleChange}
-						required
-					/>
-					<label htmlFor="phoneNumber">Phone Number:</label>
-					<input
-						type="tel"
-						id="phoneNumber"
-						name="phoneNumber"
-						placeholder="Phone Numer"
-						value={this.state.phoneNumber}
-						onChange={this.hanndleChange}
-						required
-					/>
-					<button type="submit">Submit</button>
+					<div className="detail-input-row">
+						<label htmlFor="fName">First Name:</label>
+						<input
+							type="text"
+							id="fName"
+							name="firstName"
+							placeholder="First Name"
+							value={this.state.firstName}
+							onChange={this.hanndleChange}
+							required
+						/>
+					</div>
+					<div className="detail-input-row">
+						<label htmlFor="lName">Last Name:</label>
+						<input
+							type="text"
+							id="lName"
+							name="lastName"
+							placeholder="Last Name"
+							value={this.state.lastName}
+							onChange={this.hanndleChange}
+							required
+						/>
+					</div>
+					<div className="detail-input-row">
+						<label htmlFor="email">Email:</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Email"
+							value={this.state.email}
+							onChange={this.hanndleChange}
+							required
+						/>
+					</div>
+					<div className="detail-input-row">
+						<label htmlFor="phoneNumber">Phone Number:</label>
+						<input
+							type="tel"
+							id="phoneNumber"
+							name="phoneNumber"
+							placeholder="Phone Numer"
+							value={this.state.phoneNumber}
+							onChange={this.hanndleChange}
+							required
+						/>
+					</div>
+					<button id="details-submit" type="submit">
+						Submit
+					</button>
 				</form>
 			</div>
 		);

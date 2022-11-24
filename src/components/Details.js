@@ -5,7 +5,7 @@ const Details = (props) => {
 	const { details } = props;
 
 	return (
-		<div className="details-container">
+		<div>
 			<div className="details">
 				<p className="details-title">First Name:</p>
 				<p className="details-info">{details.firstName}</p>

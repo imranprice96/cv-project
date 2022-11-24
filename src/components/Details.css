@@ -1,11 +1,16 @@
-.details-container {
-	border: 1px solid black;
-}
-
 .details {
 	display: flex;
+	margin: 5px;
 }
 
 .details-title {
 	font-weight: bold;
+}
+
+.details-info {
+	margin-left: 10px;
+}
+
+p {
+	margin: 0;
 }
