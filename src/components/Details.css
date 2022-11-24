@@ -1,0 +1,11 @@
+.details-container {
+	border: 1px solid black;
+}
+
+.details {
+	display: flex;
+}
+
+.details-title {
+	font-weight: bold;
+}

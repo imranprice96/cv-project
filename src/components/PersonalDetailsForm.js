@@ -1,23 +1,49 @@
 import React, { Component } from "react";
+import Details from "./Details";
 
 class PersonalDetailsForm extends Component {
 	constructor() {
 		super();
 
 		this.state = {
-			details: {
-				firstName: "",
-				lastName: "",
-				email: "",
-				phoneNumber: "",
-			},
+			firstName: "",
+			lastName: "",
+			email: "",
+			phoneNumber: "",
+			isSubmitted: false,
 		};
 	}
 
-	onSubmitDetails = (e) => {};
+	hanndleChange = (e) => {
+		const target = e.target;
+		const value = target.value;
+		const name = target.name;
+
+		this.setState({
+			[name]: value,
+		});
+	};
+
+	onSubmitDetails = (e) => {
+		e.preventDefault();
+		this.setState({ isSubmitted: true });
+	};
+
+	onEdit = () => {
+		this.setState({ isSubmitted: false });
+	};
 
 	render() {
-		const { details } = this.state;
+		const isSubmitted = this.state.isSubmitted;
+
+		if (isSubmitted) {
+			return (
+				<div>
+					<Details details={this.state} />
+					<button onClick={this.onEdit}>Edit</button>
+				</div>
+			);
+		}
 
 		return (
 			<div>
@@ -27,32 +53,40 @@ class PersonalDetailsForm extends Component {
 					<input
 						type="text"
 						id="fName"
+						name="firstName"
 						placeholder="First Name"
-						value={details.firstName}
+						value={this.state.firstName}
+						onChange={this.hanndleChange}
 						required
 					/>
 					<label htmlFor="lName">Last Name:</label>
 					<input
 						type="text"
 						id="lName"
+						name="lastName"
 						placeholder="Last Name"
-						value={details.lastName}
+						value={this.state.lastName}
+						onChange={this.hanndleChange}
 						required
 					/>
 					<label htmlFor="email">Email:</label>
 					<input
 						type="email"
 						id="email"
+						name="email"
 						placeholder="Email"
-						value={details.email}
+						value={this.state.email}
+						onChange={this.hanndleChange}
 						required
 					/>
 					<label htmlFor="phoneNumber">Phone Number:</label>
 					<input
 						type="tel"
 						id="phoneNumber"
+						name="phoneNumber"
 						placeholder="Phone Numer"
-						value={details.phoneNumber}
+						value={this.state.phoneNumber}
+						onChange={this.hanndleChange}
 						required
 					/>
 					<button type="submit">Submit</button>
