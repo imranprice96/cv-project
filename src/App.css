@@ -1,0 +1,14 @@
+body {
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	background-color: #ccc;
+}
+
+#root {
+	min-width: 75%;
+	min-height: 100%;
+	background-color: white;
+}
