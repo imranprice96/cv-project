@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 
 class EducationForm extends Component {
-	constructor(props) {
+	constructor() {
 		super();
 
-		//pass id back to parent
-
 		this.state = {
-			id: props.id,
 			institution: "",
 			study: "",
 			fromDate: null,
@@ -15,11 +12,9 @@ class EducationForm extends Component {
 		};
 	}
 	render() {
-		console.log(this.state.id);
 		return (
 			<form>
 				<button>Save</button>
-				<button>Delete</button>
 			</form>
 		);
 	}

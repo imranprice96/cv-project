@@ -9,20 +9,16 @@ class EducationContainer extends Component {
 
 		this.state = {
 			education: [],
-			node: {
-				id: uniqid(),
-				output: null,
-			},
 		};
 	}
 
 	addEducationForm = () => {
 		this.setState({
 			education: this.state.education.concat(
-				<EducationForm id={uniqid()} />
+				<EducationForm key={uniqid()} />
 			),
 		});
-		console.log(this.state.education.length);
+		console.log(this.state.education);
 	};
 
 	render() {
