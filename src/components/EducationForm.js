@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Education from "./components/Education";
+import Education from "./Education";
+import "./Form.css";
 
 class EducationForm extends Component {
 	constructor() {
@@ -61,7 +62,7 @@ class EducationForm extends Component {
 
 		return (
 			<form id="eduForm" onSubmit={this.onSubmitEdu}>
-				<div>
+				<div className="detail-input-row">
 					<label htmlFor="institution">Institution:</label>
 					<input
 						type="text"
@@ -72,7 +73,7 @@ class EducationForm extends Component {
 						required
 					/>
 				</div>
-				<div>
+				<div className="detail-input-row">
 					<label htmlFor="study">Study:</label>
 					<input
 						type="text"
@@ -83,7 +84,7 @@ class EducationForm extends Component {
 						required
 					/>
 				</div>
-				<div>
+				<div className="detail-input-row">
 					<label htmlFor="fromDate">From:</label>
 					<input
 						type="date"
@@ -94,7 +95,7 @@ class EducationForm extends Component {
 						required
 					/>
 				</div>
-				<div>
+				<div className="detail-input-row">
 					<label htmlFor="toDate">To:</label>
 					<input
 						type="date"
@@ -105,9 +106,12 @@ class EducationForm extends Component {
 						required
 					/>
 				</div>
-				<button id="edu-submit" type="submit">
-					Submit
-				</button>
+				<div className="detail-input-row">
+					<button id="edu-submit" type="submit">
+						Submit
+					</button>
+					<button onClick={this.onDelete}>Delete</button>
+				</div>
 			</form>
 		);
 	}

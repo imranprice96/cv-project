@@ -27,3 +27,13 @@ input {
 label {
 	font-weight: bold;
 }
+
+button {
+	padding: 5px;
+	margin: 5px;
+	font-weight: bold;
+}
+
+h1 {
+	margin: 20px;
+}
