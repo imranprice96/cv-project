@@ -11,6 +11,7 @@ class EducationForm extends Component {
 			fromDate: "",
 			toDate: "",
 			isSubmitted: false,
+			isDeleted: false,
 		};
 	}
 
@@ -33,10 +34,18 @@ class EducationForm extends Component {
 		this.setState({ isSubmitted: false });
 	};
 
-	onDelete = () => {};
+	onDelete = () => {
+		this.setState({ isDeleted: true });
+	};
 
 	render() {
 		const isSubmitted = this.state.isSubmitted;
+		const isDeleted = this.state.isDeleted;
+
+		if (isDeleted) {
+			console.log(isDeleted);
+			return null;
+		}
 
 		if (isSubmitted) {
 			return (
