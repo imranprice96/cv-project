@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Details from "./Details";
-import "./Form.css";
+import "../Form.css";
 
 class PersonalDetailsForm extends Component {
 	constructor() {

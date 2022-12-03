@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import PersonalDetailsForm from "./PersonalDetailsForm";
-import EducationContainer from "./EducationContainer";
+import PersonalDetailsForm from "./personalDetails/PersonalDetailsForm";
+import EducationContainer from "./education/EducationContainer";
 import ExpContainer from "./experience/ExpContainer";
 
 class Form extends Component {

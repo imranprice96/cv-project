@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import EducationForm from "./EducationForm";
-import "./Form.css";
+import "../Form.css";
 import uniqid from "uniqid";
 
 class EducationContainer extends Component {
