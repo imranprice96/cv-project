@@ -8,24 +8,23 @@ class EducationContainer extends Component {
 		super();
 
 		this.state = {
-			education: [],
+			educationForms: [],
 		};
 	}
 
 	addEducationForm = () => {
 		this.setState({
-			education: this.state.education.concat(
+			educationForms: this.state.educationForms.concat(
 				<EducationForm key={uniqid()} />
 			),
 		});
-		console.log(this.state.education);
 	};
 
 	render() {
 		return (
 			<div className="details-container">
 				<h2>Education</h2>
-				{this.state.education}
+				{this.state.educationForms}
 				<button onClick={this.addEducationForm}>Add</button>
 			</div>
 		);
