@@ -53,8 +53,12 @@ class EducationForm extends Component {
 				<div>
 					<div className="details-container">
 						<Education details={this.state} />
-						<button onClick={this.onEdit}>Edit</button>
-						<button onClick={this.onDelete}>Delete</button>
+						<button className="d-print-none" onClick={this.onEdit}>
+							Edit
+						</button>
+						<button className="d-print-none" onClick={this.onDelete}>
+							Delete
+						</button>
 					</div>
 				</div>
 			);
@@ -107,10 +111,12 @@ class EducationForm extends Component {
 					/>
 				</div>
 				<div className="detail-input-row">
-					<button id="edu-submit" type="submit">
+					<button className="d-print-none" id="edu-submit" type="submit">
 						Submit
 					</button>
-					<button onClick={this.onDelete}>Delete</button>
+					<button className="d-print-none" onClick={this.onDelete}>
+						Delete
+					</button>
 				</div>
 			</form>
 		);

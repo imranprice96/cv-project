@@ -22,7 +22,9 @@ class ExpContainer extends Component {
 			<div className="details-container">
 				<h2>Work Experience</h2>
 				{this.state.expForms}
-				<button onClick={this.addExpForm}>Add</button>
+				<button className="d-print-none" onClick={this.addExpForm}>
+					Add
+				</button>
 			</div>
 		);
 	}

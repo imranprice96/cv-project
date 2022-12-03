@@ -1,5 +1,4 @@
 .details-container {
-	border: 1px solid black;
 	padding: 20px;
 	margin: 20px;
 	font-size: 1.2rem;
@@ -36,4 +35,11 @@ button {
 
 h1 {
 	margin: 20px;
+	text-align: center;
+}
+
+@media print {
+	.d-print-none {
+		display: none;
+	}
 }

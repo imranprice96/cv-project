@@ -25,7 +25,9 @@ class EducationContainer extends Component {
 			<div className="details-container">
 				<h2>Education</h2>
 				{this.state.educationForms}
-				<button onClick={this.addEducationForm}>Add</button>
+				<button className="d-print-none" onClick={this.addEducationForm}>
+					Add
+				</button>
 			</div>
 		);
 	}

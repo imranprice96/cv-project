@@ -53,8 +53,12 @@ class ExpForm extends Component {
 				<div>
 					<div className="details-container">
 						<Experience details={this.state} />
-						<button onClick={this.onEdit}>Edit</button>
-						<button onClick={this.onDelete}>Delete</button>
+						<button className="d-print-none" onClick={this.onEdit}>
+							Edit
+						</button>
+						<button className="d-print-none" onClick={this.onDelete}>
+							Delete
+						</button>
 					</div>
 				</div>
 			);
@@ -109,7 +113,7 @@ class ExpForm extends Component {
 					<label htmlFor="tasks">Main Tasks:</label>
 					<textarea
 						rows="4"
-						cols="80"
+						cols="50"
 						id="tasks"
 						name="tasks"
 						value={this.state.tasks}
@@ -118,10 +122,12 @@ class ExpForm extends Component {
 					></textarea>
 				</div>
 				<div className="detail-input-row">
-					<button id="exp-submit" type="submit">
+					<button className="d-print-none" id="exp-submit" type="submit">
 						Submit
 					</button>
-					<button onClick={this.onDelete}>Delete</button>
+					<button className="d-print-none" onClick={this.onDelete}>
+						Delete
+					</button>
 				</div>
 			</form>
 		);

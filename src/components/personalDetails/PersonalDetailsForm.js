@@ -42,7 +42,9 @@ class PersonalDetailsForm extends Component {
 				<div className="details-container">
 					<h2>Personal Information</h2>
 					<Details details={this.state} />
-					<button onClick={this.onEdit}>Edit</button>
+					<button className="d-print-none" onClick={this.onEdit}>
+						Edit
+					</button>
 				</div>
 			);
 		}
@@ -99,7 +101,11 @@ class PersonalDetailsForm extends Component {
 							required
 						/>
 					</div>
-					<button id="details-submit" type="submit">
+					<button
+						className="d-print-none"
+						id="details-submit"
+						type="submit"
+					>
 						Submit
 					</button>
 				</form>
